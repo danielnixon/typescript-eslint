@@ -68,7 +68,7 @@ function isOuterEnum(
   variable: TSESLint.Scope.Variable,
   reference: TSESLint.Scope.Reference,
 ): boolean {
-  const node = variable.defs[0].node as TSESTree.Node;
+  const node = variable.defs[0].node;
 
   return (
     node.type === AST_NODE_TYPES.TSEnumDeclaration &&
